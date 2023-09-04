@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HelperController">
+   <children>
+      <TabPane layoutY="25.0" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Menu">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="382.0">
+                     <children>
+                        <TableView layoutX="1.0" prefHeight="345.0" prefWidth="498.0">
+                          <columns>
+                            <TableColumn prefWidth="152.0" text="CuisineId" />
+                            <TableColumn prefWidth="168.0" text="Name" />
+                              <TableColumn prefWidth="278.0" text="Price" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="520.0" layoutY="125.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" text="ADD" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Order">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="344.0" prefWidth="381.0">
+                          <columns>
+                            <TableColumn prefWidth="135.0" text="Name" />
+                            <TableColumn prefWidth="119.0" text="Prcie" />
+                              <TableColumn prefWidth="126.0" text="Status" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="458.0" layoutY="267.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="87.0" text="Save" />
+                        <Button layoutX="458.0" layoutY="218.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="87.0" text="Delete" />
+                        <Label layoutX="386.0" layoutY="70.0" prefHeight="26.0" prefWidth="36.0" text="Total:" />
+                        <TextField layoutX="422.0" layoutY="70.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="All Orders">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="1.0" prefHeight="343.0" prefWidth="145.0">
+                          <columns>
+                            <TableColumn prefWidth="144.0" text="OrderNum">
+                                 <graphic>
+                                    <TableView prefHeight="360.0" prefWidth="146.0">
+                                       <columns>
+                                          <TableColumn prefWidth="144.0" text="OrderNum" />
+                                       </columns>
+                                    </TableView>
+                                 </graphic>
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                        <TableView layoutX="145.0" prefHeight="344.0" prefWidth="452.0">
+                           <columns>
+                              <TableColumn prefWidth="142.0" text="Name" />
+                              <TableColumn prefWidth="147.0" text="Prcie" />
+                              <TableColumn prefWidth="167.0" text="Status" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Deliever">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="343.0" prefWidth="285.0">
+                           <columns>
+                              <TableColumn prefWidth="284.0" text="Already done OrderNum" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="380.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="135.0" text="Food delivery" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ButtonBar prefHeight="8.0" prefWidth="600.0">
+        <buttons>
+          <Button fx:id="Get_an_order" mnemonicParsing="false" onAction="#get_an_order" prefHeight="26.0" prefWidth="320.0" text="Order " />
+            <Button fx:id="Helper_exit" mnemonicParsing="false" onAction="#helper_exit" prefHeight="50.0" prefWidth="279.0" text="Exit" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
